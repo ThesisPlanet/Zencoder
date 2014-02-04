@@ -1,6 +1,6 @@
 {
     "name" : "thesisplanet/zencoder",
-    "description" : "Load Zencoder Service via Service Locator",
+    "description" : "Load Zencoder Service via Zend Framework (ZF2) Service Locator",
     "type" : "library",
     "homepage" : "http://www.github.com/ThesisPlanet/Zencoder",
     "require" : {
