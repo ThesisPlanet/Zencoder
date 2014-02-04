@@ -6,7 +6,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 class ZencoderFactory implements FactoryInterface
 {
 
-    const CONFIGURATION_NOT_SET = "You must first configure the Zencoder module by copying over zencoder.local.dist.php to the autoload folder.";
+    const CONFIGURATION_NOT_SET = "You must first configure the Zencoder module by copying over zencoder.local.dist.php to the autoload folder and renaming it to zencoder.local.php.";
 
     const API_KEY_NOT_SET = "An API key has not been set in the zencoder configuration file. Please correct that and this message will go away.";
     /*
