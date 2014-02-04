@@ -1,31 +1,39 @@
 <?php
 namespace Zencoder;
+use Zend\Loader\StandardAutoloader;
+use Zend\Loader\AutoloaderFactory;
+use Zend\EventManager\EventInterface;
+use Zend\ModuleManager\Feature\ConfigProviderInterface;
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 
-class Module
+/**
+ * Module class
+ *
+ * @category AssetManager
+ * @package AssetManager
+ */
+class Module implements AutoloaderProviderInterface, ConfigProviderInterface
 {
 
+    /**
+     * {@inheritDoc}
+     */
     public function getAutoloaderConfig ()
     {
         return array(
-                'Zend\Loader\ClassMapAutoloader' => array(
-                        __DIR__ . '/autoload_classmap.php'
-                ),
-                'Zend\Loader\StandardAutoloader' => array(
-                        'namespaces' => array(
-                                __NAMESPACE__ => __DIR__ . '/src/' .
-                                         __NAMESPACE__
+                AutoloaderFactory::STANDARD_AUTOLOADER => array(
+                        StandardAutoloader::LOAD_NS => array(
+                                __NAMESPACE__ => __DIR__
                         )
                 )
         );
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getConfig ()
     {
-        return include __DIR__ . '/config/module.config.php';
-    }
-
-    public function getServiceConfig ()
-    {
-        return array();
+        return include __DIR__ . '/../../config/module.config.php';
     }
 }

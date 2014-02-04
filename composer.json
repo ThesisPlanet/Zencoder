@@ -17,8 +17,8 @@
       }
     ],
     "autoload": {
-        "psr-4": {
-            "Zencoder\\": "src/"
+        "psr-0": {
+            "Zencoder": "src/"
         }
     }    
 }
