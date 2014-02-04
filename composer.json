@@ -1,6 +1,6 @@
 {
-    "name" : "ThesisPlanet/Zencoder",
-    "description" : "Load Zencoder via Service Locator",
+    "name" : "thesisplanet/zencoder",
+    "description" : "Load Zencoder Service via Service Locator",
     "type" : "library",
     "homepage" : "http://www.github.com/ThesisPlanet/Zencoder",
     "require" : {
@@ -18,7 +18,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "TP_Zencoder\\": "src/"
+            "Zencoder\\": "src/"
         }
     }    
 }
