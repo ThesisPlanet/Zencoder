@@ -18,10 +18,10 @@ class ZencoderFactory implements FactoryInterface
         if (! array_key_exists('zencoder', $config)) {
             throw new \exception(self::CONFIGURATION_NOT_SET);
         }
-        if (null == $config->zencoder->api_key) {
+        if (null == $config['zencoder']['api_key']) {
             throw new \exception(self::API_KEY_NOT_SET);
         } else {
-            $api_key = $config->zencoder->api_key;
+            $api_key = $config['zencoder']['api_key'];
         }
         
         $zencoderService = new \Services_Zencoder($api_key);
