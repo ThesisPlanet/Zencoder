@@ -8,7 +8,7 @@ Load up Zencoder (Service_Zencoder) through the ZF2 Service Locator.
 Installation
 ------------
 
-1. require in composer.json
+1. require in composer.json "thesisplanet/zencoder": "dev-master"
 2. add 'Zencoder' to your list of required modules in application.config.php
 3. Copy over vendor/thesisplanet/zencoder/config/zencoder.local.dist.php to config/autoload/zencoder.local.php
 
